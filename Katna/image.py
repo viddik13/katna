@@ -224,6 +224,7 @@ class Image(object):
         writer,
         filters=[],
         down_sample_factor=config.Image.down_sample_factor,
+        mode="file"  # 'file' to write to file, 'image' for OpenCV image, 'json' for coordinate annotation
     ):
         """smartly crops all the images (inside a directory) based on the specification - width and height
 
