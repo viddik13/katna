@@ -7,7 +7,7 @@ from Katna.writer import ImageCropDiskWriter
 
  # Extract specific number of key frames from video
 
-def main(image_file_path, crop_width, crop_height, output_folder_cropped_image):
+def main(image_file_path, crop_width, crop_height, output_folder_cropped_image, hints=1):
     img_module = Image()
 
     # number of images to be returned
@@ -58,4 +58,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(args.image_file_path, args.crop_width, args.crop_height, args.out_folder)
+    main(args.image_file_path, args.crop_width, args.crop_height, args.out_folder, hints=args.number_of_hints)
